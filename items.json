@@ -1,0 +1,15 @@
+[
+    {"name":"ビッグマッム", "subItem":[
+        {"name":"単品", "price":350},
+        {"name":"ラスクセット", "price":400}
+    ]},
+    {"name":"牛串", "subItem":[
+        {"name":"牛串", "price":350}
+    ]},
+    {"name":"タピオカドリンク", "subItem":[
+        {"name":"いちご", "price":350},
+        {"name":"ミルクティー", "price":350},
+        {"name":"抹茶", "price":350},
+        {"name":"ココア", "price":350}
+    ]}
+]

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>dukiPos</title>
+        <link href="css/posMain.css" rel="stylesheet" type="text/css"/>
+        <script src="js/posMain.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <h1>dukiPos</h1>
+        <table>
+            <tr>
+                <th colspan="2">アイテム名</th>
+                <th>価格</th>
+                <th>増減</th>
+                <th>数量</th>
+            </tr>
+
+            {% for item in items %}
+            {% for subItem in item.subItem %}
+            <tr>
+                <td>{{item.name}}</td>
+                <td>{{subItem.name}}</td>
+                <td>{{subItem.price}}</td>
+                <td>
+                    <button onclick='changeAmount("{{subItem.name}}", 1)'>+</button>
+                    <button onclick='changeAmount("{{subItem.name}}", -1)'>-</button>
+                </td>
+                <td id="{{subItem.name}}" class="itemCount">0</td>
+            </tr>
+            {% endfor %}
+            {% endfor %}
+        </table>
+        <button onclick='SendOrder()'>Send</button>
+        
+    </body>
+</html>
